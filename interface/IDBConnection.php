@@ -1,5 +1,6 @@
 <?php
 
-interface IDBConnection
+interface IDB_connection
 {
+
 }
