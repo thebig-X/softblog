@@ -11,7 +11,7 @@ CREATE TABLE users(
     password varchar(255) NOT NULL,
     avatar varchar(255),
     about text(500),
-    status int DEFAULT 1,
+    status tinyint DEFAULT 1,
     created_at DATETIME NOT NULL,
     modified_at DATETIME,
     PRIMARY KEY (id)
@@ -58,6 +58,7 @@ CREATE TABLE posts(
     excerpt varchar(100) NOT NULL,
 	body text NOT NULL,
 	featured_image varchar(255),
+    post_status tinyint DEFAULT 0,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
@@ -77,4 +78,3 @@ CREATE TABLE post_tags(
     FOREIGN KEY(tag_id) REFERENCES tags(id),
     PRIMARY KEY (post_id, tag_id)
 );
-
