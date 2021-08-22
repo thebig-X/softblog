@@ -59,6 +59,8 @@ CREATE TABLE posts(
 	body text NOT NULL,
 	featured_image varchar(255),
     post_status tinyint DEFAULT 0,
+    created_at DATETIME NOT NULL,
+    modified_at DATETIME,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
