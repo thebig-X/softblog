@@ -1,23 +1,16 @@
 <?php
-    return [
 
-        'sqlite' => [
-            'driver' => 'sqlite',
-            'url' => getenv('DATABASE_URL'),
-            'database' => getenv('DB_DATABASE', database_path('database.sqlite')),
-            'prefix' => '',
-            'foreign_key_constraints' => getenv('DB_FOREIGN_KEYS', true),
-        ],
+    return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => getenv('DATABASE_URL'),
-            'host' => getenv('DB_HOST', '127.0.0.1'),
-            'port' => getenv('DB_PORT', '3306'),
-            'database' => getenv('DB_DATABASE', 'forge'),
-            'username' => getenv('DB_USERNAME', 'forge'),
-            'password' => getenv('DB_PASSWORD', ''),
-            'unix_socket' => getenv('DB_SOCKET', ''),
+            'url' => 'DATABASE_URL',
+            'host' =>  '127.0.0.1',
+            'port' => '3306',
+            'database' => 'forge',
+            'username' => 'forge',
+            'password' =>  '',
+            'unix_socket' =>  '',
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
@@ -28,15 +21,13 @@
                 PDO::MYSQL_ATTR_SSL_CA => getenv('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
-
         'pgsql' => [
             'driver' => 'pgsql',
-            'url' => getenv('DATABASE_URL'),
-            'host' => getenv('DB_HOST', '127.0.0.1'),
-            'port' => getenv('DB_PORT', '5432'),
-            'database' => getenv('DB_DATABASE', 'forge'),
-            'username' => getenv('DB_USERNAME', 'forge'),
-            'password' => getenv('DB_PASSWORD', ''),
+            'host' => '127.0.0.1',
+            'port' =>  '5432',
+            'database' => 'softblog',
+            'username' => 'postgres',
+            'password' =>  'johnson10',
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,

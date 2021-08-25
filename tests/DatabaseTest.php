@@ -1,7 +1,9 @@
 <?php
-    namespace \Tests\DatabaseTest;
+    namespace Tests;
 
-    class DatabaseTest extends \PHPUnit\Framework\TestCase
+    use PHPUnit\Framework\TestCase;
+
+    class DatabaseTest extends TestCase
     {
         /**
          * @test

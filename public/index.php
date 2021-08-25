@@ -1,16 +1,13 @@
 <?php
     require __DIR__ . "/../vendor/autoload.php";
 
-    use App\Models\Model;
-
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/..");
     $dotenv->load();
 
+    use App\Database\Model;
 
-    $model = new Model();
+    $config = require "../config/database.php";
+    $model = new Model($config);
 
-    echo "<pre>";
-    print_r($_SERVER);
-    echo "<pre>";
 
 
